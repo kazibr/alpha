@@ -91,3 +91,15 @@ h2.post-title {
     color: #ccc;
     font-size: 100px;
 }
+
+.authorimage img{
+    border-radius: 48px;
+}
+
+.authorsection{
+    border:1px solid #ccc;
+    padding:25px;
+}
+.authorpage{
+    margin-bottom:50px;
+}

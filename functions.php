@@ -24,7 +24,7 @@ function alpha_bootstrapping(){
     add_theme_support('post-thumbnails');
     register_nav_menu('topmenu', __('Top Menu','alpha'));
     register_nav_menu('footermenu',__('Footer Menu', 'alpha'));
-    add_theme_support('post-formats', array('audio','video','image','quote'));
+    add_theme_support('post-formats', array('audio','video','image','quote','link'));
 }
 
 add_action( 'after_setup_theme', 'alpha_bootstrapping');
