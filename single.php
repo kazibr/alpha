@@ -47,6 +47,28 @@
                                 <?php                        
                             the_content();
 
+                            ?>
+                            <?php
+                                if(get_post_format()=='image'){
+                                    ?>
+                                    <div class="metainfo">
+                                        <strong>Camera Name: </strong> <?php the_field('camera_model');?><br/>
+                                        <strong>Location: </strong><?php the_field('location');?><br/>
+                                        <strong>date: </strong><?php the_field('date');?><br/>
+                                        <?php
+                                        if(get_field('licensed')==true){?>
+
+                                            <strong>License Information: </strong><?php the_field('license');?>
+                                            <?php
+                                        }
+                                        ?>
+                                    </div>
+                                    
+                                    <?php
+                                }
+                            ?>
+                            <?php
+
                             wp_link_pages();
                             next_post_link();
                             echo "<br/>";
@@ -75,7 +97,7 @@
 
                         <?php if(comments_open()){?>
                         <div class="col-md-12">
-                            <?php //comments_template()?>
+                            <?php comments_template()?>
                         </div>
                         <?php }?>
                     </div>

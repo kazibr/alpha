@@ -1,5 +1,7 @@
 <?php
 
+require_once get_theme_file_path( '/inc/tgm.php' );
+
 if(site_url()=='http://dev.testone.com/wp'){
     define('VERSION', time());
 }else{
